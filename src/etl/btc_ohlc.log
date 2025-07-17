@@ -1,4 +1,0 @@
-2025-07-17 04:20:30,989 [ERROR] Status code 400 for  URL https://data-api.coindesk.com/index/cc/v1/historical/days  | to_ts 1875456000
-2025-07-17 04:21:12,125 [ERROR] Status code 400 for  URL https://data-api.coindesk.com/index/cc/v1/historical/days  | to_ts 1875456000
-2025-07-17 04:22:17,718 [ERROR] Status code 400 for  URL https://data-api.coindesk.com/index/cc/v1/historical/days  | to_ts 1875456000
-2025-07-17 04:23:16,083 [ERROR] Status code 400 for  URL https://data-api.coindesk.com/index/cc/v1/historical/days  | to_ts 1875456000
