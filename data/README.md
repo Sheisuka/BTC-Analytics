@@ -11,4 +11,4 @@
 Источник [ФР банк Сент-Луиса](https://fred.stlouisfed.org/series/DFF)  
 - **S&P 500** 
 Индекс Standard & Poor's 500, включающий в себя крупнейшие по капитализации компании США, котируемые на биржах NYSE и NASDAQ.  
-Источник [Investing](https://www.investing.com/indices/us-spx-500-historical-data)  
+Источник [Investing](https://www.marketwatch.com/investing/index/spx)  
