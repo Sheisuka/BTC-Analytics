@@ -2,3 +2,4 @@
 venv
 *.log
 data/raw
+.DS_STORE
