@@ -2,13 +2,16 @@
 
 - **Индекс страха и жадности** 
 Индекс, характеризующий рыночный сантимент, включает в себя волатильность, торговые объемы, анализ хештегов в социальных сетях, доминация Bitcoin, google тренды.  
-Источник [Alternative](https://alternative.me/crypto/fear-and-greed-index/#google_vignette)  
+Источник [Alternative](https://alternative.me/crypto/fear-and-greed-index/#google_vignette)
+
 - **Bitcoin OHLC+**
 Содержит значения открытия, закрытия, максимальных, минимальных значений цены, а также многие торговые данные.
 Источник [Coindesk](https://data.coindesk.com/trade-data)    
+
 - **Ставка по федеральным фондам** 
 Ставка по федеральным фондам, которая является ключевой ставкой Федеральной резервной системы США.  
 Источник [ФР банк Сент-Луиса](https://fred.stlouisfed.org/series/DFF)  
+
 - **S&P 500** 
 Индекс Standard & Poor's 500, включающий в себя крупнейшие по капитализации компании США, котируемые на биржах NYSE и NASDAQ.  
 Источник [Investing](https://www.marketwatch.com/investing/index/spx)  
