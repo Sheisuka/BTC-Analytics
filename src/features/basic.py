@@ -35,7 +35,7 @@ features["btc_rel_vol_20"] = btc["volume"] / btc["volume"].rolling(20, min_perio
 
 spx_td = spx[spx["is_trading_day"] == True][["close"]].copy() # признаки только по сесиям
 
-spx_td                  = spx_td.rename({"close": "spx_close"})
+spx_td                  = spx_td.rename(columns={"close": "spx_close"})
 spx_td["spx_ret_1d"]    = spx_td["spx_close"].pct_change(1)
 spx_td["spx_ret_5d"]    = spx_td["spx_close"].pct_change(5)
 spx_td["spx_ret_21d"]   = spx_td["spx_close"].pct_change(21)

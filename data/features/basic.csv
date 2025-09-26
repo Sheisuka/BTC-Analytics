@@ -1,4 +1,4 @@
-date,btc_close,btc_ret_1d,btc_ret_7d,btc_ret_30d,btc_ma7,btc_ma20,btc_ma60,btc_vol_20,btc_dist_to_ma20,btc_rel_vol_20,close,spx_ret_1d,spx_ret_5d,spx_ret_21d,spx_ma20,spx_dist_ma20
+date,btc_close,btc_ret_1d,btc_ret_7d,btc_ret_30d,btc_ma7,btc_ma20,btc_ma60,btc_vol_20,btc_dist_to_ma20,btc_rel_vol_20,spx_close,spx_ret_1d,spx_ret_5d,spx_ret_21d,spx_ma20,spx_dist_ma20
 2013-01-02,13.2944949976478,,,,,,,,,,1462.42,,,,,
 2013-01-03,13.4254513211494,0.009850417298646663,,,,,,,,,1459.37,-0.0020855841687067445,,,,
 2013-01-04,13.5165440963178,0.006785081036709828,,,,,,,,,1466.47,0.004865113028224677,,,,
