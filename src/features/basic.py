@@ -3,7 +3,7 @@ import pathlib
 
 
 stagePath    = pathlib.Path("data/stage")
-featuresPath = pathlib.Path("data/features")
+featuresPath = pathlib.Path("data/features/components")
 
 btc_csv  = "btc.csv"
 spx_csv  = "spx.csv"
