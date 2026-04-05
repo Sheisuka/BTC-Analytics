@@ -1,7 +1,44 @@
 import numpy as np
+import pandas as pd
 import itertools as itt
 
 # Источник для CPCV - de Prado Advances in Financial Machine Learning
+
+
+def purge(t1, test_times):
+    """Удаляет из обучающей выборки наблюдения, перекрывающиеся с тестовой.
+
+    t1 — Series, индекс = начало наблюдения, значение = конец метки.
+    test_times — Series, индекс = начало теста, значение = конец теста.
+    """
+    train = t1.copy(deep=True)
+    for start, end in test_times.items():
+        df_0 = train[(start <= train.index) & (train.index <= end)].index
+        df_1 = train[(start <= train) & (train <= end)].index
+        train = train.drop(df_0.union(df_1))
+    return train
+
+
+def _embargo_shift(times, pct_embargo):
+    """Сдвигает конечные метки вперёд на pct_embargo * len(times)."""
+    step = int(times.shape[0] * pct_embargo)
+    if step == 0:
+        return pd.Series(times, index=times)
+    ans = pd.Series(times[step:].values, index=times[:-step].index)
+    ans = pd.concat([ans, pd.Series(times[-1], index=times[-step:].index)])
+    return ans
+
+
+def embargo(test_times, t1, pct_embargo=0.01):
+    """Расширяет тестовые интервалы на эмбарго-период.
+
+    Это предотвращает утечку информации из-за автокорреляции
+    вблизи границ тестовой выборки.
+    """
+    t1_embargo = _embargo_shift(t1.index, pct_embargo)
+    test_times_embargoed = t1_embargo.loc[test_times.index]
+    return test_times_embargoed
+
 
 def cpcv_generator(t_span, n, k):
     # 1. разбиваем моменты времени на n групп
