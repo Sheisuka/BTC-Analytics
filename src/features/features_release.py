@@ -1,15 +1,16 @@
-import pandas as pd
-import pathlib
 import os
+import pathlib
 
-out         = "features_v1.csv"
-featuresP   = pathlib.Path("data/features")
+import pandas as pd
+
+out = "features_v2.csv"
+featuresP = pathlib.Path("data/features")
 componentsP = pathlib.Path("data/features/components")
 
 timeline = pd.date_range(start="2013-01-02", end="2025-05-29", freq="D")
 features = pd.DataFrame(index=timeline)
 
-seen  = {"date"}
+seen = {"date"}
 files = os.listdir(componentsP)
 for f in files:
     if not f.endswith(".csv"):
@@ -25,8 +26,8 @@ for f in files:
         features[col] = df[col]
 
 
-max_gap        = 60
-init_rows      = features.shape[0]
+max_gap = 60
+init_rows = features.shape[0]
 
 features = features.dropna()
 

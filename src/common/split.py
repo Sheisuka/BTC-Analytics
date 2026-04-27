@@ -24,8 +24,8 @@ def _embargo_shift(times, pct_embargo):
     step = int(times.shape[0] * pct_embargo)
     if step == 0:
         return pd.Series(times, index=times)
-    ans = pd.Series(times[step:].values, index=times[:-step].index)
-    ans = pd.concat([ans, pd.Series(times[-1], index=times[-step:].index)])
+    ans = pd.Series(times[step:].values, index=times[:-step])
+    ans = pd.concat([ans, pd.Series(times[-1], index=times[-step:])])
     return ans
 
 
